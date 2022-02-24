@@ -1,0 +1,46 @@
+#6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.  
+Sample String : 'abc'
+Expected Result : 'abcing'
+Sample String : 'string'
+Expected Result : 'stringly'
+s = input("enter a string!: ")
+if s.__len__()<3:
+  print(s)
+elif (s.endswith('ing')):
+  print(s+"ly")
+else:
+  print(s+"ing")
+
+
+#8. Write a Python function that takes a list of words and return the longest word and the length of the longest one.  
+Sample Output:
+Longest word: Exercises
+Length of the longest word: 9
+l = []
+n= int(input("number of words you want to enter: "))
+for i in range(n):
+  w= input("enter words: ")
+  l.append(w)
+l.sort()
+n = l[-1]
+print("the longest word is {0} and it's length is {1}".format(n,(len(n))))
+  
+
+#10. Write a Python program to change a given string to a new string where the first and last chars have been exchanged.  
+s = input("enter a string: ")
+s1= s[-1]+s[1:]+s[0]
+print("our new string is:",s1)
+  
+
+#11. Write a Python program to remove the characters which have odd index values of a given string.  
+
+s = input("enter a string: ")
+s1 = s[0: : 2]
+print(s1)
+
+
+#13. Write a Python script that takes input from the user and displays that input back in upper and lower cases.  
+s = input("enter a sentence: ")
+c= s.upper()
+l= s.lower()
+print(c,l,sep="\n")
